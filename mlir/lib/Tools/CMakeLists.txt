@@ -1,6 +1,7 @@
 add_subdirectory(lsp-server-support)
 add_subdirectory(mlir-lsp-server)
 add_subdirectory(mlir-opt)
+add_subdirectory(mlir-pdll)
 add_subdirectory(mlir-pdll-lsp-server)
 add_subdirectory(mlir-query)
 add_subdirectory(mlir-reduce)

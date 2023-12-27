@@ -5,11 +5,7 @@ set(LLVM_LINK_COMPONENTS
 )
 
 set(LIBS
-  MLIRIR
-  MLIRPDLLAST
-  MLIRPDLLCodeGen
-  MLIRPDLLODS
-  MLIRPDLLParser
+  MLIRPDLLLib
   )
 
 add_tablegen(mlir-pdll MLIR_PDLL
@@ -23,5 +19,6 @@ add_tablegen(mlir-pdll MLIR_PDLL
 
 set_target_properties(mlir-pdll PROPERTIES FOLDER "Tablegenning")
 target_link_libraries(mlir-pdll PRIVATE ${LIBS})
+llvm_update_compile_flags(mlir-pdll)
 
 mlir_check_all_link_libraries(mlir-pdll)
